@@ -1,0 +1,398 @@
+/* CSS pour l'en-tête */
+header {
+  background-size: cover; /* Utilisé pour couvrir toute la zone de l'en-tête */
+  position: relative; /* Permet le positionnement des éléments enfants */
+}
+
+/* CSS pour le conteneur de l'image d'en-tête */
+.header-image {
+  position: relative;
+  overflow: hidden; /* Masquer le débordement de l'image */
+  height: 150px; /* Ajustez la hauteur selon vos besoins */
+}
+
+/* Arrière-plan semi-transparent avec dégradé pour l'image d'en-tête */
+.header-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #1fbfb8, #1978a5, #031163);
+  opacity: 0.7;
+}
+
+/* CSS pour l'image d'en-tête */
+.header-image img {
+  width: 100%;
+  object-fit: cover; /* Remplit l'espace en coupant l'image si nécessaire */
+}
+
+/* Style pour le titre dans l'en-tête */
+.header-image h1 {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centre le titre horizontalement et verticalement */
+  color: white; /* Couleur du texte */
+  font-size: 28px; /* Ajustez la taille de la police pour plus d'espace */
+  border: solid white 2px;
+  padding: 10px; /* Ajoutez de la marge intérieure pour l'encadrement */
+  width: 80%; /* Ajustez la largeur du conteneur du titre */
+  font-family: Roboto, sans-serif; /* Définition de la police personnalisée */
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Définition de la police personnalisée */
+@font-face {
+  font-family: Roboto;
+  src: url(../police/Roboto-Black.ttf); /* Spécifiez le chemin de la police personnalisée */
+}
+
+/* CSS pour Onglet */
+.section-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: #02082a8f;
+}
+
+.section-image {
+  width: 100%;
+  height: 150px;
+  background-image: url(../images/turtle.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+
+.section-description {
+  position: absolute;
+  top: 8%; /* Centrer verticalement */
+  left: 50%; /* Centrer horizontalement */
+  transform: translate(-50%, -50%); /* Centrer le texte */
+  color: white;
+  font-size: smaller;
+  font-family: Roboto, sans-serif;
+  padding: 5px 10px; /* Ajustez la marge intérieure pour l'encadrement */
+  border-radius: 5px;
+}
+
+.section-header  {
+  position: relative;
+}
+
+/* CSS pour page des utilisateurs */
+.emoticon {
+  color: #0a415b;
+  margin-left: 30px;
+}
+.emoticon i {
+  color: #0a415b;
+}
+
+/* CSS du texte  */
+h2 {
+  color: #1978a5;
+  font-family: Roboto, sans-serif;
+}
+p {
+  font-family: Roboto, sans-serif;
+}
+
+.profile {
+  border: solid 1.5px black;
+  width: 218px;
+  margin: 3% 10% 3% 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  border-bottom: solid 1.5px black;
+  max-width: 100%;
+  height: auto;
+}
+
+.image:hover {
+  transform: scale(1.5);
+  position: absolute;
+  overflow: hidden;
+  filter: grayscale(100%);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.815);
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigImg {
+  max-width: 80%;
+  max-height: 80%;
+  display: block;
+  margin: 0 auto;
+}
+.newsletter {
+  margin-left: 2.5%;
+  margin-bottom: 10%;
+  font-family: Roboto, sans-serif;
+}
+
+.newsletterLabel {
+  font-weight: 900;
+  text-align: center;
+}
+
+.newsletterSubmit {
+  display: flex;
+  align-items: stretch; /* Ajoutez cette propriété pour s'assurer que les enfants s'étendent verticalement */
+  border: 2px solid #031163;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5%;
+}
+
+.newsletterSubmit .inputMail {
+  flex-grow: 1;
+  border: none;
+  height: 25px; /* Ajustez la hauteur si nécessaire */
+  line-height: 35px; /* Assurez-vous que cette hauteur est la même que celle de .inputMail */
+  padding: 0 10px; /* Ajustez le padding selon vos besoins */
+}
+
+.newsletterSubmit .inputSubmit {
+  border: none;
+  background-color: #031163;
+  color: white;
+  cursor: pointer;
+  padding: 0 15px; /* Ajustez le padding pour l'alignement vertical */
+  height: 25px; /* Assurez-vous que cette hauteur est la même que celle de .inputMail */
+}
+.error-message {
+  color: rgb(204, 86, 86);
+}
+
+.success-message {
+  color: #0a415b;
+  background-color: #d1e7dd;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.div-input-newsletter {
+  margin-bottom: 100px;
+}
+
+.footer-text {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  color: white;
+  font-size: smaller;
+  border: solid white 2px;
+  font-family: Roboto, sans-serif;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Style pour le footer */
+footer {
+  background: linear-gradient(to right, #1fbfb8, #1978a5, #031163);
+  opacity: 0.9;
+}
+
+/* Style pour les liens du footer */
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 5%;
+  padding-top: 3%;
+}
+
+/* Style pour les icônes de médias sociaux du footer */
+.footer-social-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 60px;
+}
+
+/* Style pour les mentions légales du footer */
+.legal-mentions {
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+/* Style pour le conteneur du texte du footer */
+.footer-text-container {
+  padding-top: 20px; /* Ajoutez de l'espace en haut en ajustant la valeur de margin-top */
+}
+
+/* Media Query pour les écrans de largeur minimale de 750px */
+@media screen and (min-width: 750px) {
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 2%;
+    padding-top: 3%;
+  }
+  .footer-text {
+    font-size: medium;
+    width: 27%;
+  }
+
+  .header-image h1 {
+    width: 50%; /* Ajustez la largeur du conteneur du titre */
+  }
+  .link {
+    font-size: 18px; /* Ajustez la taille des icônes en fonction de vos besoins */
+    padding-left: 13%;
+  }
+  .emoticon i {
+    font-size: large;
+  }
+
+  .newsletter {
+    margin-bottom: 5%;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+  }
+  .newsletterLabel {
+    font-weight: 900;
+  }
+  .newsletterSubmit {
+    margin-top: 4%;
+  }
+  .newsletterSubmit .inputMail {
+    width: 60%;
+    height: 35px;
+  }
+  .newsletterSubmit .inputSubmit {
+    height: 35px;
+  }
+}
+
+/* Media Query pour les écrans de largeur minimale de 1400px */
+@media screen and (min-width: 1400px) {
+  .header-image h1 {
+    width: 25%; /* Ajustez la largeur du conteneur du titre */
+  }
+
+  .footer-text {
+    font-size: medium;
+    width: 17%;
+  }
+
+  .footer-text-container {
+    padding-top: 35px; /* Ajoutez de l'espace en haut en ajustant la valeur de margin-top */
+  }
+  .footer-links {
+    padding-bottom: 1%;
+  }
+
+
+  .link {
+    font-size: 20px; /* Ajustez la taille des icônes */
+    padding-left: 13%;
+  }
+
+  /* Réorganise l'affichage de .onglet et .content-section */
+  .main-content {
+    display: flex; /* Utilisez flex pour afficher .onglet à gauche et .content-section à droite */
+  }
+
+  .section-header {
+    width: 25%; /* Ajustez la largeur de .onglet */
+  }
+
+  .content-section {
+    width: 75%; /* Ajustez la largeur de .content-section */
+    padding-left: 3%;
+    padding-right: 5%;
+  }
+
+  .section-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .section-description  {
+    position: absolute;
+    top: 3%; /* Centrer verticalement */
+    left: 50%; /* Centrer horizontalement */
+    transform: translate(-50%, -50%); /* Centrer le texte */
+    color: white;
+    font-size: smaller;
+    padding: 5px 10px; /* Ajustez la marge intérieure */
+    border-radius: 5px;
+  }
+
+  .section-image::before {
+    height: 150px;
+  }
+
+  .profile {
+    border: solid 1.5px black;
+    width: 240px;
+    margin: 3% 10% 3% 10%;
+  }
+
+  .newsletter {
+    margin-left: 2.5%;
+    font-family: Roboto, sans-serif;
+    text-align: start;
+  }
+
+  .newsletterSubmit {
+    text-align: start;
+    max-width: 50%; /* Réduit la largeur maximale de la barre newsletter */
+
+
+  }
+
+  .newsletterSubmit .inputMail {
+    width: auto; /* Ajustement pour occuper l'espace restant */
+    height: 30px; /* Ajustez la hauteur si nécessaire */
+  }
+
+  .newsletterSubmit .inputSubmit {
+    height: 30px; /* Assurez-vous que cette hauteur est la même que celle de .inputMail */
+    padding: 0 12px; /* Ajustez le padding */
+  }
+
+  .newsletterLabel {
+    text-align: start;
+  }
+}

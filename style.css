@@ -1,0 +1,305 @@
+/* CSS pour l'en-tête */
+header {
+  background-size: cover; /* Utilisé pour couvrir toute la zone de l'en-tête */
+  position: relative; /* Permet le positionnement des éléments enfants */
+}
+
+/* CSS pour le conteneur de l'image d'en-tête */
+.header-image {
+  position: relative;
+  overflow: hidden; /* Masquer le débordement de l'image */
+  height: 150px; /* Ajustez la hauteur selon vos besoins */
+}
+
+/* Arrière-plan semi-transparent avec dégradé pour l'image d'en-tête */
+.header-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #1fbfb8, #1978a5, #031163);
+  opacity: 0.7;
+}
+
+/* CSS pour l'image d'en-tête */
+.header-image img {
+  width: 100%;
+  object-fit: cover; /* Remplit l'espace en coupant l'image si nécessaire */
+}
+
+/* Style pour le titre dans l'en-tête */
+.header-image h1 {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centre le titre horizontalement et verticalement */
+  color: white; /* Couleur du texte */
+  font-size: 28px; /* Ajustez la taille de la police pour plus d'espace */
+  border: solid white 2px;
+  padding: 10px; /* Ajoutez de la marge intérieure pour l'encadrement */
+  width: 80%; /* Ajustez la largeur du conteneur du titre */
+  font-family: Roboto, sans-serif; /* Définition de la police personnalisée */
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Définition de la police personnalisée */
+@font-face {
+  font-family: Roboto;
+  src: url(./police/Roboto-Black.ttf); /* Spécifiez le chemin de la police personnalisée */
+}
+
+/* CSS pour les sections de menu */
+.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  gap: 20px; /* Espacement entre les sections */
+  margin-bottom: 5%;
+}
+.services section {
+  position: relative;
+  margin-top: 2%;
+}
+
+/* CSS pour les images de menu */
+.visit-image,
+.rates-hours-image,
+.training-image,
+.encounters-image {
+  width: 180px; /* Largeur de l'image */
+  height: 180px; /* Hauteur de l'image */
+  border-radius: 50%; /* Rend l'image complètement ronde */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* CSS pour les carrés blancs contenant le texte des sections de menu */
+.description-visit,
+.description-rates-hours,
+.description-training,
+.description-encounters {
+  padding: 10px; /* Ajoutez de la marge intérieure pour le texte */
+  position: absolute;
+  bottom: 0;
+  right: 25%; /* Réglez la position à 50% de la droite */
+  transform: translateX(
+    50%
+  ); /* Déplacez le carré de 50% vers la gauche pour le centrer */
+  text-align: center;
+  width: 70px; /* Largeur du carré */
+  height: 70px; /* Hauteur du carré */
+  font-family: Roboto, sans-serif;
+  font-size: smaller;
+  color: white;
+}
+
+/* Style spécifique pour la PHOTO 1 */
+.visit-image {
+  background-image: url(./images/visit.jpg);
+}
+
+.description-visit {
+  background-color: #1fbfb8;
+}
+
+.visit-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(31, 191, 187, 0.54);
+  border-radius: 50%;
+}
+
+/* Style spécifique pour la PHOTO 2 */
+.rates-hours-image {
+  background-image: url(./images/price.jpg);
+}
+
+.description-rates-hours {
+  background-color: #1978a5;
+}
+
+.rates-hours-image ::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 120, 165, 0.54);
+  border-radius: 50%;
+}
+
+/* Style spécifique pour la PHOTO 3 */
+.training-image {
+  background-image: url(./images/training.jpg);
+}
+
+.description-training {
+  background-color: #031163;
+}
+
+.training-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 17, 99, 0.54);
+  border-radius: 50%;
+}
+
+/* Style spécifique pour la PHOTO 4 */
+.encounters-image {
+  background-image: url(./images/turtle.jpg);
+}
+
+.description-encounters {
+  background-color: #02082a;
+}
+
+.encounters-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #02082a8f;
+  border-radius: 50%;
+}
+
+/* Style pour le texte du footer */
+.footer-text {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  color: white;
+  font-size: smaller;
+  border: solid white 2px;
+  font-family: Roboto, sans-serif;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+/* Style pour le footer */
+footer {
+  background: linear-gradient(to right, #1fbfb8, #1978a5, #031163);
+  opacity: 0.9;
+}
+
+/* Style pour les liens du footer */
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 5%;
+  padding-top: 3%;
+}
+
+/* Style pour les icônes de médias sociaux du footer */
+.footer-social-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 60px;
+}
+
+/* Style pour les mentions légales du footer */
+.legal-mentions {
+  text-decoration: none;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+/* Style pour le conteneur du texte du footer */
+.footer-text-container {
+  padding-top: 20px; /* Ajoutez de l'espace en haut en ajustant la valeur de margin-top */
+}
+
+/* Media Query pour les écrans de largeur minimale de 750px */
+@media screen and (min-width: 750px) {
+  .services {
+    flex-direction: row;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    justify-content: space-evenly; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 2%;
+    padding-top: 3%;
+  }
+  .footer-text {
+    font-size: medium;
+    width: 27%;
+  }
+
+  .header-image h1 {
+    width: 50%; /* Ajustez la largeur du conteneur du titre */
+  }
+  .link {
+    font-size: 18px; /* Ajustez la taille des icônes en fonction de vos besoins */
+    padding-left: 13%;
+  }
+}
+
+/* Media Query pour les écrans de largeur minimale de 1400px */
+@media screen and (min-width: 1400px) {
+  .services {
+    flex-direction: row;
+    margin-bottom: 0%;
+    padding-bottom: 3%;
+    padding-top: 1%;
+    justify-content: space-evenly; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+  }
+
+  .header-image h1 {
+    width: 25%; /* Ajustez la largeur du conteneur du titre */
+  }
+
+  .footer-text {
+    font-size: medium;
+    width: 17%;
+  }
+
+  .footer-text-container {
+    padding-top: 35px; /* Ajoutez de l'espace en haut en ajustant la valeur de margin-top */
+  }
+  .footer-links {
+    padding-bottom: 1%;
+  }
+  .link {
+    font-size: 20px; /* Ajustez la taille des icônes en fonction de vos besoins */
+    padding-left: 13%;
+  }
+
+  /* Style pour les images de menu aux grandes dimensions */
+  .visit-image,
+  .rates-hours-image,
+  .training-image,
+  .encounters-image {
+    width: 300px; /* Largeur de l'image */
+    height: 300px; /* Hauteur de l'image */
+  }
+
+  /* Style pour les carrés blancs aux grandes dimensions */
+  .description-visit,
+  .description-rates-hours,
+  .description-training,
+  .description-encounters {
+    padding: 15px; /* Ajoutez de la marge intérieure pour le texte */
+    width: 118px; /* Largeur du carré */
+    height: 105px; /* Hauteur du carré */
+    font-family: Roboto, sans-serif;
+    font-size: larger;
+    color: white;
+  }
+}
